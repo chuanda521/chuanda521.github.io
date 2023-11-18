@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>后台登录</title>
+    <link rel="stylesheet" href="./css/1.css">
+</head>
+<body>
+    <div class="login">
+        <h1>管理员后台</h1>
+        <form action="https://githubfast.com/login"> 
+            <!-- <label for="username">用户名</label> -->
+            <input type="text" id="uname" value="" placeholder="用户名"/><br>
+            <input type="password" id="pwd" value="" placeholder="密码"/><br>
+            <input type="submit" id="but" value="登录" onclick="return checkuser()"/> 
+            <!-- 返回了true就会打开页面  -->
+        </form> 
+    </div>
+</body> 
+ 
+<script type="text/javascript"> 
+    function getValue(id) { 
+        return document.getElementById(id).value; 
+        // 查找元素
+    } 
+    function checkuser() { 
+        if(getValue('uname') == "chuanda521" && getValue('pwd') == "cjh.081113") { 
+            return true; 
+        }else { 
+            alert("登录名或密码错误！")
+            // 警告框
+            return false; 
+        } 
+    } 
+</script> 
+<script>
+    //禁用操作
+    
+    window.onload = function(){
+        document.onkeydown = function (){
+            var e = window.event || arguments[0];
+            //F12
+            if(e.keyCode == 123){
+                return false;
+            //Ctrl+Shift+I
+            }else if((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)){
+                return false;
+            //Ctrl+Shift+C
+            }else if((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 67)){
+                return false;
+            //Shift+F10
+            }else if((e.shiftKey) && (e.keyCode == 121)){
+                return false;
+            //Ctrl+U
+            }else if((e.ctrlKey) && (e.keyCode == 85)){
+                return false;
+            //Ctrl+S
+            }else if((e.ctrlKey) && (e.keyCode == 83)){
+            return false;
+        }
+    };
+        document.oncontextmenu = function (){
+            return false;
+        }
+    }
+    
+    //禁止复制
+    document.onselectstart=new Function('event.returnValue=false;');
+    
+    //禁止选择文字
+    document.body.onselectstart = function() {
+        self.event.returnValue=false
+      };
+</script>
+</html>
