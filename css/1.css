@@ -1,0 +1,76 @@
+
+body {
+    font-size: 12px;
+    background: url('./img/1.jpg') no-repeat 0 0;
+    background-size: cover;
+    background-attachment: fixed
+
+ /*普通的，电脑端图片背景*/
+
+}
+@media(max-width: 768px) {
+    body {
+        background-image:url('./img/2.png');
+
+ /*用于手机端图片背景，如果图片相同需要特殊优化*/
+
+    }
+}
+
+/* url 里的地址换成你的图片地址，手机和电脑图片不同*/
+/* https://go.fuyeor.com/ran/pic 必应每日图片接口 */
+
+body{   
+    width: 100%;   
+    height: 100%;   
+    /* font-family: 'Open Sans',sans-serif;    */
+    margin: 0; 
+    /* background-color: rgb(232, 175, 175);  */
+}   
+.login {
+    position: absolute;
+      /*用position 当浏览器缩小的时候,盒子位置不变  */
+    top: 50%;   
+    left:50%;   
+    margin: -150px 0 0 -150px;   
+    width: 300px;   
+    height: 300px;   
+}
+.login h1{   
+    color: rgb(12, 7, 7);   
+    text-shadow:0 0 10px;   
+    letter-spacing: 1px;   
+    text-align: center;
+    font-size: 2em;   
+    margin: 0.67em 0;     
+}
+#uname,#pwd{   
+    width: 278px;   
+    height: 18px;   
+    margin-bottom: 10px;   
+    outline: none;   
+    padding: 10px;   
+    font-size: 13px;   
+    color: #fff;   
+    text-shadow:1px 1px 1px;   
+    border-top: 1px solid #312E3D;   
+    border-left: 1px solid #312E3D;   
+    border-right: 1px solid #312E3D;   
+    border-bottom: 1px solid #56536A;   
+    border-radius: 4px;   
+    background-color: #2D2D3F;   
+}   
+#but{   
+    width: 300px;   
+    min-height: 20px; 
+      /*设置段落的最小高度 */
+    display: block;   
+    background-color: #4a77d4;   
+    border: 1px solid #3762bc;   
+    color: #fff;   
+    padding: 9px 14px;   
+    font-size: 15px;   
+    line-height: normal;   
+    border-radius: 5px;   
+    margin: 0;   
+}
